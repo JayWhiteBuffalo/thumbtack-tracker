@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+#Benchmarks and Issues faced
+
+2/25 - While creating the update and delete resolvers, was getting undefined objects and errors
+     - FIX - Add parent to the parameters is a requirement. the ({_id}) was being read as the first paramenter instead of the second. This was causing the mutation to look for a property of id in a undefined object.
